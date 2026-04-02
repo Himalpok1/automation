@@ -5,7 +5,12 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "test-run": "node -e \"require('./src/index.js')\""
+    "test-run": "node -e \"require('./src/index.js')\"",
+    "prod": "pm2 start ecosystem.config.js",
+    "prod:stop": "pm2 stop tech-page-bot",
+    "prod:restart": "pm2 restart tech-page-bot",
+    "prod:logs": "pm2 logs tech-page-bot",
+    "prod:status": "pm2 status"
   },
   "dependencies": {
     "axios": "^1.6.0",
